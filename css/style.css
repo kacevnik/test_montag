@@ -27,6 +27,9 @@
     font-style: normal;
     font-weight: normal;
 }
+:focus {
+    outline: none;
+}
 
 body{
     font-family: 'Open Sans', sans-serif;
@@ -154,6 +157,67 @@ header{
     }
     .test ul li.li_check{
         background: url(../img/check-yes.png)no-repeat;
+    }
+
+    .informa{
+        border: 5px solid #789ad5;
+        margin: 50px 0 0 0;
+        padding: 0 25px 25px 25px;
+    }
+
+    .informa h3{
+        font-family: 'ProximaNovaBold', sans-serif;
+        color: #fbd62a;
+        font-size: 30px;
+    }
+
+    .informa p{
+        font-family: 'ProximaNovaBold', sans-serif;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .informa .result{
+        font-family: 'ProximaNovaBold', sans-serif;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .informa .result span{
+        font-family: 'ProximaNovaBold', sans-serif;
+        color: #fbd62a;
+        font-size: 30px;
+    }
+
+    .form{
+        background-color: #fff;
+        padding: 25px 25px 25px 25px;
+        margin: 25px 0 0 0;
+        text-align: center;
+    }
+
+    .form p{
+        color: #494949;
+        text-align: center;
+        font-weight: normal;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 22px;
+        margin: 0 0 20px 0;
+    }
+
+    .form p span{
+        color: #fbd62a;
+    }
+
+    .form input{
+        width: 100%;
+        border: 1px solid #d2d2d2;
+        margin-bottom: 20px;
+        padding: 20px 25px;
+    }
+
+    .form input:focus{
+        border: 1px solid #6f6f6f;
     }
 
 @media (max-width: 992px){
