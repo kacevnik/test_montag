@@ -7,6 +7,7 @@ jQuery(function($) {
 	$('.li_click').click(function(){
 		var grup = $(this).attr('grup');
 		$('.li_click[grup="'+grup+'"]').removeClass('li_check');
+		$('.error').remove();
 		if(!$(this).hasClass('li_check')){
 			$(this).addClass('li_check');
 		}
@@ -28,6 +29,8 @@ jQuery(function($) {
 		if($(this).attr('check') == 1){
 			$(this).parent().hide();
 			$('#'+$(this).attr('to')).fadeIn(300);
+		}else{
+			$(this).parent().append('<div class="error"><i>!Следует выбрать один из вариантов</i></div>');
 		}
 		return false;	
 	});

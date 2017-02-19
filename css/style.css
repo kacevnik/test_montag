@@ -114,6 +114,11 @@ header{
         -o-box-shadow:0px 20px 49px -4px rgba(255, 134, 35,1) ;
         -moz-box-shadow:0px 20px 49px -4px rgba(255, 134, 35,1) ;
     }
+    
+    .error{
+        margin-top: 44px;
+        color: #fff;
+    }
 
     .but:hover{
         color: #fff;
