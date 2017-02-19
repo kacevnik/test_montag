@@ -24,6 +24,11 @@ jQuery(function($) {
 		$(this).parent('ul').next().attr('check', '1');
 		$('.result span').text(grup*2000+'р');
 		$('.informa').slideDown('slow');
+		if($(document).width()< 992){
+			$('.fon_activ').removeClass('fon_activ');
+			$('.fon').height($('.fon .container').height()+45+'px');
+			$('.fon').addClass('fon_activ');
+		}
 	});
 
 	$('#start').click(function(){
@@ -47,7 +52,13 @@ jQuery(function($) {
 			$(this).parent().hide();
 			$('#'+$(this).attr('to')).fadeIn(300);
 		}else{
+			$('.error').remove();
 			$(this).parent().append('<div class="error"><i>!Следует выбрать один из вариантов</i></div>');
+		}
+		if($(document).width()< 992){
+			$('.fon_activ').removeClass('fon_activ');
+			$('.fon').height($('.fon .container').height()+45+'px');
+			$('.fon').addClass('fon_activ');
 		}
 		return false;	
 	});
