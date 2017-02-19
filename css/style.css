@@ -121,6 +121,11 @@ header{
         background-color: #fba345;
     }
 
+    .but:focus{
+        color: #fff;
+        text-decoration: none;
+    }
+
     .but i{
         margin-left: 15px;
     }
@@ -160,6 +165,14 @@ header{
     }
 
     .for_form{
+        display: none;
+    }
+    
+    #step_2{
+        display: none;
+    }
+
+    #step_3{
         display: none;
     }
 

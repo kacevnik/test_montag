@@ -23,5 +23,13 @@ jQuery(function($) {
 		$('.test').fadeIn(300);	
 		return false;	
 	});
+
+	$('.steping').click(function(){
+		if($(this).attr('check') == 1){
+			$(this).parent().hide();
+			$('#'+$(this).attr('to')).fadeIn(300);
+		}
+		return false;	
+	});
 });
 	
