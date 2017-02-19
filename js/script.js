@@ -9,5 +9,13 @@ jQuery(function($) {
 			$(this).addClass('li_check');
 		}
 	});
+
+	$('#start').click(function(){
+		$('.fon').height($(document).height());
+		$('.fon').addClass('fon_activ');
+		$('.enter').hide();
+		$('.test').fadeIn(300);	
+		return false;	
+	});
 });
 	
