@@ -2,6 +2,12 @@ jQuery(function($) {
 	$('.main').height($(document).height());
 	$('.fon_activ').height($(document).height());
 
+	$("form").ajaxForm(function(){
+		$("form").clearForm();
+		//$("#modal_view").trigger("click");	
+		$('.fon_activ').removeClass('fon_activ');
+	});
+
 	$('input[name="phone"]').mask("+7 (999) 999-9999");
 
 	$('.li_click').click(function(){
@@ -27,6 +33,12 @@ jQuery(function($) {
 
 	$('.steping').click(function(){
 		if($(this).attr('check') == 1){
+			if($(this).attr('to') == 'final'){
+				$('.informa').hide();
+				$('.form p').text('Получите материалы прямо сейчас');
+				$('.form button').text('Получить материалы');
+				$('.form').css({'maegin-top':'50px'});
+			}
 			$(this).parent().hide();
 			$('#'+$(this).attr('to')).fadeIn(300);
 		}else{
