@@ -6,6 +6,8 @@ jQuery(function($) {
 		$("form").clearForm();
 		//$("#modal_view").trigger("click");	
 		$('.fon_activ').removeClass('fon_activ');
+		$('.for_form, #final, .test').hide();
+		$('.enter').fadeIn(300);
 	});
 
 	$('input[name="phone"]').mask("+7 (999) 999-9999");
@@ -17,6 +19,8 @@ jQuery(function($) {
 		if(!$(this).hasClass('li_check')){
 			$(this).addClass('li_check');
 		}
+		var val = $('input[name="test"]').attr('value');
+		$('input[name="test"]').attr('value', val+'вопрос №'+grup+': '+$(this).text()+'<br>');
 		$(this).parent('ul').next().attr('check', '1');
 		$('.result span').text(grup*2000+'р');
 		$('.informa').slideDown('slow');
@@ -38,6 +42,7 @@ jQuery(function($) {
 				$('.form p').text('Получите материалы прямо сейчас');
 				$('.form button').text('Получить материалы');
 				$('.form').css({'maegin-top':'50px'});
+				$('input[name="hidden"]').attr('value', 'Форма в конце теста');
 			}
 			$(this).parent().hide();
 			$('#'+$(this).attr('to')).fadeIn(300);

@@ -6,13 +6,12 @@ require 'phpmailer/class.phpmailer.php';
 // ==== Принудительный захват массива переменных ==========================
 // ==== раскомментировать, если письма отправляются без значений полей ====
 
-$adninEmail = 'bani-nsk@yandex.ru';
+$adninEmail = 'otoplenie.nsk54@gmail.com';
 $email = $_POST['email']; if($email){$textEmail = 'Email пользователя: '.$email.'<br>';}
-$name = $_POST['name']; if($name){$name = 'Имя пользователя: '.$name.'<br>';}
 $phone = $_POST['phone']; if($phone){$phone = 'Телефон пользователя: '.$phone.'<br>';}
-$test = $_POST['test']; if($test){$test = 'Результаты тестирования: '.$test.'<br>';}
+$test = $_POST['test']; if($test){$test = 'Результаты тестирования: <br><i>'.$test.'</i>';}
 $form = $_POST['hidden'];
-$lid = $_POST['lid'];
+$id = $_POST['id'];
 
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
@@ -48,7 +47,7 @@ if($lid == 1){
 	$mail->addAddress($email, $email);
 
 	// Тема
-	$mail->Subject = 'Результаты подбора бани';
+	$mail->Subject = 'Результаты теста по отоплению';
 
 	// convert HTML into a basic plain-text alternative body
 	$mail->msgHTML('<p>Здравствуйте.</p><p>Мы уже подобрали 3 подходящих проекта, и в ближайшее время их Вам отправим.
