@@ -181,6 +181,22 @@ header{
         display: none;
     }
 
+    #step_4{
+        display: none;
+    }
+
+    #step_5{
+        display: none;
+    }
+
+    #step_6{
+        display: none;
+    }
+
+    #final{
+        display: none;
+    }
+
     .informa{
         border: 5px solid #789ad5;
         margin: 50px 0 0 0;
