@@ -159,10 +159,15 @@ header{
         background: url(../img/check-yes.png)no-repeat;
     }
 
+    .for_form{
+        display: none;
+    }
+
     .informa{
         border: 5px solid #789ad5;
         margin: 50px 0 0 0;
         padding: 0 25px 25px 25px;
+        display: none;
     }
 
     .informa h3{
