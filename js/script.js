@@ -8,6 +8,7 @@ jQuery(function($) {
 		if(!$(this).hasClass('li_check')){
 			$(this).addClass('li_check');
 		}
+		$(this).parent('ul').next().attr('check', '1');
 	});
 
 	$('#start').click(function(){
